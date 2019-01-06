@@ -1,0 +1,9 @@
+<div fxLayout="row wrap" fxLayoutAlign="center stretch" fxLayoutGap="20px">
+
+  <mat-card class="channel-list" *ngFor="let channel of AllChannels" routerLink="/watch/{{channel.group}}/{{channel.id}}">
+    <mat-card-title class="text-center">{{channel.title}}</mat-card-title>
+    <mat-card-content>
+      <img [src]="channel.thumb_square">
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,22 @@
+<div fxLayout.gt-xs="row" fxLayout.lt-sm="column"  fxLayoutAlign="center start" fxLayoutGap="20px">
+  <div class="video-wrapper" fxFlex="70" fxFlex.lt-sm="100"  [style.height.px]="height" >
+    <vg-player (onPlayerReady)="onPlayerReady($event)">
+      <vg-overlay-play></vg-overlay-play>
+      
+      <vg-controls [vgAutohide]="true" [vgAutohideTime]="1">
+        <vg-play-pause></vg-play-pause>
+        <vg-scrub-bar>
+        </vg-scrub-bar>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+        <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+      <video #media [vgMedia]="media" [vgHls]="currentStream.source" id="live-channel-video" crossorigin preload="auto"
+        autoplay="true" >
+      </video>
+    </vg-player>
+  </div>
+  <div fxFlex="230px" class="sidebar" [style.height.px]="sidebarheight">
+    <anms-sidebar></anms-sidebar>
+  </div>
+</div>

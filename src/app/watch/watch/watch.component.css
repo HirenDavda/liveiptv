@@ -1,0 +1,16 @@
+
+
+video {
+    margin: 0 auto;
+}
+.sidebar{
+    overflow: auto;
+    min-height: inherit !important;
+    max-height: inherit !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .video-wrapper {
+        width: 100% !important;
+    }
+}
